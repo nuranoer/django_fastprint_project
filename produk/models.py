@@ -9,5 +9,5 @@ class Status(models.Model):
 class Produk(models.Model):
     nama_produk = models.CharField(max_length=255)
     harga = models.DecimalField(max_digits=10, decimal_places=2)
-    kategori = models.ForeignKey(Kategori, on_delete=models.CASCADE)
-    status = models.ForeignKey(Status, on_delete=models.CASCADE)
+    kategori_id = models.ForeignKey(Kategori, on_delete=models.CASCADE)
+    status_id = models.ForeignKey(Status, on_delete=models.CASCADE)
